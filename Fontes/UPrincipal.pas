@@ -16,7 +16,7 @@ type
     Sistema2: TMenuItem;
     Cadastros1: TMenuItem;
     N1: TMenuItem;
-    N2: TMenuItem;
+    Produtos1: TMenuItem;
     Clientes1: TMenuItem;
     N3: TMenuItem;
     N4: TMenuItem;
@@ -36,6 +36,9 @@ type
     N8: TMenuItem;
     procedure Clientes1Click(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);
+    procedure Produtos1Click(Sender: TObject);
+    procedure btnProdutosClick(Sender: TObject);
+    procedure PDV1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,21 +52,54 @@ implementation
 
 {$R *.dfm}
 
-uses UClientes;
+uses UClientes, UFuncoes, UProdutos, UPDV;
 
 
 procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
 begin
 //Chamar form Clientes
-Clientes1.Click;
+  Clientes1.Click;
+end;
+
+procedure TfrmPrincipal.btnProdutosClick(Sender: TObject);
+begin
+Produtos1.Click;
 end;
 
 procedure TfrmPrincipal.Clientes1Click(Sender: TObject);
 begin
+// Função de verificação de nivel de acesso
+// Para isto foi criado uma Unit Funções chamada TestarPermissao
+    if TestarPermissao('frmClientes') = False then
+    Exit;
+
 // Chamar o form Clientes
   if frmClientes = nil then
   frmClientes := TfrmClientes.Create(self);
-  frmClientes.ShowModal;
+  frmClientes.ShowModal;   // Shomodal impede que seja usada a janela atrás da aberta
+
+end;
+
+procedure TfrmPrincipal.PDV1Click(Sender: TObject);
+begin
+  if TestarPermissao('frmPDV') = False then
+  Exit;
+  begin
+    frmPDV := TfrmPDV.Create(self);
+    frmPDV.ShowModal;
+  end;
+
+end;
+
+procedure TfrmPrincipal.Produtos1Click(Sender: TObject);
+begin
+  if TestarPermissao('frmProdutos') = False then
+  Exit;
+  begin
+    frmProdutos := TfrmProdutos.Create(self);
+    frmProdutos.ShowModal;
+  end;
+
 
 end;
 

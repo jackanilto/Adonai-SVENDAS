@@ -117,6 +117,15 @@
             <Form>frmClientes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Fontes\UFuncoes.pas"/>
+        <DCCReference Include="Fontes\UProdutos.pas">
+            <Form>frmProdutos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Fontes\UPDV.pas">
+            <Form>frmPDV</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

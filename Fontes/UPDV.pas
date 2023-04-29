@@ -1,0 +1,26 @@
+unit UPDV;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmPDV = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPDV: TfrmPDV;
+
+implementation
+
+{$R *.dfm}
+
+uses UPrincipal;
+
+end.

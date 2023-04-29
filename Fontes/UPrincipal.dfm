@@ -2571,9 +2571,6 @@ object frmPrincipal: TfrmPrincipal
     Width = 984
     Height = 19
     Panels = <>
-    ExplicitLeft = 400
-    ExplicitTop = 368
-    ExplicitWidth = 0
   end
   object PanelMenuPrincipal: TPanel
     Left = 0
@@ -2720,6 +2717,7 @@ object frmPrincipal: TfrmPrincipal
         09090909090909090909090909090909090909090909096F6375090909090909
         090909090909090909090909090909090909096F6375}
       Layout = blGlyphTop
+      OnClick = btnProdutosClick
     end
     object btnPdv: TSpeedButton
       Left = 278
@@ -2820,8 +2818,9 @@ object frmPrincipal: TfrmPrincipal
       object N1: TMenuItem
         Caption = '-'
       end
-      object N2: TMenuItem
+      object Produtos1: TMenuItem
         Caption = 'Produtos'
+        OnClick = Produtos1Click
       end
       object Clientes1: TMenuItem
         Caption = 'Clientes'
@@ -2838,6 +2837,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object PDV1: TMenuItem
         Caption = 'PDV'
+        OnClick = PDV1Click
       end
       object Caixa1: TMenuItem
         Caption = 'Caixa'

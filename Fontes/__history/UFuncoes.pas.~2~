@@ -1,0 +1,16 @@
+unit UFuncoes;
+
+interface
+//Declara as funçoes e variaveis
+function TestarPermissao (NOME_FORM:string):boolean;
+
+implementation
+// Aqui será implementado as funções
+
+// Esta será a função que testa a permissão do usuario
+function TestarPermissao (NOME_FORM:string):boolean;
+begin
+  Result := True;
+end;
+
+end.
