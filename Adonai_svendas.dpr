@@ -2,7 +2,8 @@ program Adonai_svendas;
 
 uses
   Vcl.Forms,
-  UPrincipal in 'Fontes\UPrincipal.pas' {frmPrincipal};
+  UPrincipal in 'Fontes\UPrincipal.pas' {frmPrincipal},
+  UClientes in 'Fontes\UClientes.pas' {frmClientes};
 
 {$R *.res}
 

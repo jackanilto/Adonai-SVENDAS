@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/04/29 10:02:45.318,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/04/29 10:05:06.546,C:\Adonai-SVENDAS\Fontes\UPrincipal.pas=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/04/29 10:05:06.546,C:\Adonai-SVENDAS\Fontes\UPrincipal.dfm=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/04/29 10:05:52.751,C:\Adonai-SVENDAS\Adonai_svendas.dproj=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2023/04/29 10:02:45.000.318,=C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 10:05:06.000.546,C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Adonai-SVENDAS\Fontes\UPrincipal.dfm</Transaction>
+    <Transaction>2023/04/29 10:05:06.000.546,C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Adonai-SVENDAS\Fontes\UPrincipal.pas</Transaction>
+    <Transaction>2023/04/29 10:05:52.000.751,C:\Users\Usuario\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Adonai-SVENDAS\Adonai_svendas.dproj</Transaction>
+    <Transaction>2023/04/29 13:03:07.145,=C:\Adonai-SVENDAS\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 13:07:16.851,C:\Adonai-SVENDAS\Fontes\UClientes.pas=C:\Adonai-SVENDAS\Unit1.pas</Transaction>
+    <Transaction>2023/04/29 13:07:16.851,C:\Adonai-SVENDAS\Fontes\UClientes.dfm=C:\Adonai-SVENDAS\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
