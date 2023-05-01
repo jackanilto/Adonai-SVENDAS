@@ -40,6 +40,7 @@ type
     procedure btnProdutosClick(Sender: TObject);
     procedure PDV1Click(Sender: TObject);
     procedure btnPdvClick(Sender: TObject);
+    procedure Sair1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,7 +54,7 @@ implementation
 
 {$R *.dfm}
 
-uses UClientes, UFuncoes, UProdutos, UPDV;
+uses UClientes, UFuncoes, UProdutos, UPDV, UDM;
 
 
 procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
@@ -107,6 +108,11 @@ begin
   end;
 
 
+end;
+
+procedure TfrmPrincipal.Sair1Click(Sender: TObject);
+begin
+Application.Terminate;
 end;
 
 end.

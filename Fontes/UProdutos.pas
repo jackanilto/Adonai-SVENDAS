@@ -4,10 +4,13 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.ComCtrls;
 
 type
   TfrmProdutos = class(TForm)
+    STBProdutos: TStatusBar;
+    DBGProdutos: TDBGrid;
   private
     { Private declarations }
   public
@@ -21,6 +24,8 @@ implementation
 
 {$R *.dfm}
 
-uses UPrincipal;
+uses UPrincipal, UDM;
+
+
 
 end.

@@ -1,0 +1,86 @@
+object frmProdutos: TfrmProdutos
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Cadastro de Produtos'
+  ClientHeight = 461
+  ClientWidth = 764
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  TextHeight = 17
+  object STBProdutos: TStatusBar
+    Left = 0
+    Top = 442
+    Width = 764
+    Height = 19
+    Panels = <>
+    ExplicitLeft = 560
+    ExplicitTop = 392
+    ExplicitWidth = 0
+  end
+  object DBGProdutos: TDBGrid
+    Left = 0
+    Top = 322
+    Width = 764
+    Height = 120
+    Align = alBottom
+    DataSource = DM.DSProdutos
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -13
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'PROD_ID'
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_NOME'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_BARRAS'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_REFER'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_CUSTO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_PRECO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_PRECO_PRAZO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'PROD_ESTOQUE'
+        Visible = True
+      end>
+  end
+end

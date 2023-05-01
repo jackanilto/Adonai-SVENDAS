@@ -2809,6 +2809,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Sair1: TMenuItem
         Caption = 'Sair'
+        OnClick = Sair1Click
       end
     end
     object Sistema2: TMenuItem
