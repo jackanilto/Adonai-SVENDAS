@@ -39,6 +39,7 @@ type
     procedure Produtos1Click(Sender: TObject);
     procedure btnProdutosClick(Sender: TObject);
     procedure PDV1Click(Sender: TObject);
+    procedure btnPdvClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,6 +60,11 @@ procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
 begin
 //Chamar form Clientes
   Clientes1.Click;
+end;
+
+procedure TfrmPrincipal.btnPdvClick(Sender: TObject);
+begin
+  PDV1.Click;
 end;
 
 procedure TfrmPrincipal.btnProdutosClick(Sender: TObject);

@@ -2790,6 +2790,7 @@ object frmPrincipal: TfrmPrincipal
         FCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFCFDFDFDF9F9F9CFCFD0D4D4D4FEFEFEFF
         FFFFFEFEFE00}
       Layout = blGlyphTop
+      OnClick = btnPdvClick
     end
   end
   object Menu_Principal: TMainMenu

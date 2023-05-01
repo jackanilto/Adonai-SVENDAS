@@ -6,7 +6,8 @@ uses
   UClientes in 'Fontes\UClientes.pas' {frmClientes},
   UFuncoes in 'Fontes\UFuncoes.pas',
   UProdutos in 'Fontes\UProdutos.pas' {frmProdutos},
-  UPDV in 'Fontes\UPDV.pas' {frmPDV};
+  UPDV in 'Fontes\UPDV.pas' {frmPDV},
+  UDM in 'Fontes\UDM.pas' {DM: TDataModule};
 
 {$R *.res}
 
@@ -16,5 +17,6 @@ begin
   Application.Title := 'Adonai Vendas';
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmPDV, frmPDV);
+  Application.CreateForm(TDM, DM);
   Application.Run;
 end.

@@ -1,0 +1,23 @@
+object DM: TDM
+  Height = 704
+  Width = 1074
+  object FDConn: TFDConnection
+    Params.Strings = (
+      'Database=C:\Adonai-SVENDAS\Database\ADONIAPDV.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    LoginPrompt = False
+    Left = 32
+    Top = 24
+  end
+  object FBDriver: TFDPhysFBDriverLink
+    Left = 120
+    Top = 24
+  end
+  object WaitCursor: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 192
+    Top = 24
+  end
+end
