@@ -2804,6 +2804,10 @@ object frmPrincipal: TfrmPrincipal
       object Ajustes1: TMenuItem
         Caption = 'Ajustes'
       end
+      object BackupRestaura1: TMenuItem
+        Caption = 'Backup / Restaura'
+        OnClick = BackupRestaura1Click
+      end
       object N8: TMenuItem
         Caption = '-'
       end

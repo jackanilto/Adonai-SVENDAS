@@ -8,6 +8,8 @@ uses
 
 type
   TfrmPDV = class(TForm)
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -22,5 +24,21 @@ implementation
 {$R *.dfm}
 
 uses UPrincipal;
+
+procedure TfrmPDV.FormCreate(Sender: TObject);
+begin
+// Ativa função teclas de atalho ( Action )
+  KeyPreview := True;
+end;
+
+procedure TfrmPDV.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+    if (Key = VK_ESCAPE) then
+    Close;
+
+  // Como alternativa pode ser utilizado
+  // Application.Terminate;
+end;
 
 end.

@@ -12,6 +12,8 @@ object frmProdutos: TfrmProdutos
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
   TextHeight = 17
   object STBProdutos: TStatusBar
     Left = 0
@@ -19,8 +21,6 @@ object frmProdutos: TfrmProdutos
     Width = 774
     Height = 19
     Panels = <>
-    ExplicitTop = 442
-    ExplicitWidth = 764
   end
   object DBGProdutos: TDBGrid
     Left = 0
@@ -68,19 +68,16 @@ object frmProdutos: TfrmProdutos
       item
         Expanded = False
         FieldName = 'PROD_PRECO'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'PROD_PRECO_PRAZO'
-        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'PROD_ESTOQUE'
-        Width = 64
         Visible = True
       end>
   end

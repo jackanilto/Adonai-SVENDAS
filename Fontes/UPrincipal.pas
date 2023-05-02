@@ -34,6 +34,7 @@ type
     Ajustes1: TMenuItem;
     Sair1: TMenuItem;
     N8: TMenuItem;
+    BackupRestaura1: TMenuItem;
     procedure Clientes1Click(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);
     procedure Produtos1Click(Sender: TObject);
@@ -41,6 +42,7 @@ type
     procedure PDV1Click(Sender: TObject);
     procedure btnPdvClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
+    procedure BackupRestaura1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,8 +56,19 @@ implementation
 
 {$R *.dfm}
 
-uses UClientes, UFuncoes, UProdutos, UPDV, UDM;
+uses UClientes, UFuncoes, UProdutos, UPDV, UDM, uBackup;
 
+
+procedure TfrmPrincipal.BackupRestaura1Click(Sender: TObject);
+begin
+  if TestarPermissao('frmBackupRestore') = False then
+  Close;
+  begin
+    TfrmBackupRestore.Create(self);
+    frmBackupRestore.ShowModal;
+  end;
+
+end;
 
 procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
 begin

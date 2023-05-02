@@ -7,12 +7,12 @@ object DM: TDM
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
-    Connected = True
     LoginPrompt = False
     Left = 24
     Top = 8
   end
   object FBDriver: TFDPhysFBDriverLink
+    VendorLib = 'C:\Adonai-SVENDAS\Firebird\fbclient.dll'
     Left = 72
     Top = 8
   end
@@ -22,7 +22,6 @@ object DM: TDM
     Top = 8
   end
   object QProdutos: TFDQuery
-    Active = True
     Connection = FDConn
     SQL.Strings = (
       'select * from produtos')

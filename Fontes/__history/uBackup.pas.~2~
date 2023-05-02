@@ -1,0 +1,62 @@
+unit uBackup;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Phys.IBBase, Data.DB,
+  FireDAC.Comp.Client, FireDAC.Phys.IBWrapper, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Comp.UI;
+
+type
+  TfrmBackupRestore = class(TForm)
+    FDCon: TFDConnection;
+    FBDriver: TFDPhysFBDriverLink;
+    WaitCursor: TFDGUIxWaitCursor;
+    FDIBBackup1: TFDIBBackup;
+    FDIBRestore1: TFDIBRestore;
+    Memo1: TMemo;
+    Memo2: TMemo;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FDIBBackup1Progress(ASender: TFDPhysDriverService;
+      const AMessage: string);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmBackupRestore: TfrmBackupRestore;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmBackupRestore.BitBtn1Click(Sender: TObject);
+begin
+  FDIBBackup1.DriverLink := FBDriver;
+
+  FDIBBackup1.UserName := 'sysdba';
+  FDIBBackup1.Password := 'masterkey';
+  FDIBBackup1.Host := 'localhost';
+  FDIBBackup1.Protocol := iplocal;
+
+  FDIBBackup1.Database := 'C:\Adonai-SVENDAS\Database\ADONAIPDV.FDB';
+  FDIBBackup1.BackupFiles.Add('C:\Adonai-SVENDAS\BackupDB');
+
+  FDIBBackup1.Backup;
+end;
+
+procedure TfrmBackupRestore.FDIBBackup1Progress(ASender: TFDPhysDriverService;
+  const AMessage: string);
+begin
+  memo1.Lines.Add(AMessage);
+end;
+
+end.

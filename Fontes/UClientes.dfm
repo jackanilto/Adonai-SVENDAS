@@ -12,5 +12,7 @@ object frmClientes: TfrmClientes
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
   TextHeight = 17
 end
