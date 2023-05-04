@@ -25,15 +25,6 @@ type
     QProdutosPROD_PRECO_PRAZO: TFloatField;
     QProdutosPROD_ESTOQUE: TIntegerField;
     DSProdutos: TDataSource;
-    TBCliente: TFDTable;
-    TBClientePROD_ID: TIntegerField;
-    TBClientePROD_NOME: TStringField;
-    TBClientePROD_BARRAS: TStringField;
-    TBClientePROD_REFER: TStringField;
-    TBClientePROD_CUSTO: TFloatField;
-    TBClientePROD_PRECO: TFloatField;
-    TBClientePROD_PRECO_PRAZO: TFloatField;
-    TBClientePROD_ESTOQUE: TIntegerField;
   private
     { Private declarations }
   public

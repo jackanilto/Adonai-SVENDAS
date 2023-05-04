@@ -14,7 +14,15 @@ object frmProdutos: TfrmProdutos
   Position = poScreenCenter
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   TextHeight = 17
+  object Label1: TLabel
+    Left = 154
+    Top = 82
+    Width = 113
+    Height = 17
+    Caption = 'Pesquisar Produtos'
+  end
   object STBProdutos: TStatusBar
     Left = 0
     Top = 505
@@ -24,17 +32,25 @@ object frmProdutos: TfrmProdutos
   end
   object DBGProdutos: TDBGrid
     Left = 0
-    Top = 385
+    Top = 136
     Width = 774
-    Height = 120
+    Height = 369
     Align = alBottom
+    Color = clBtnFace
     DataSource = DM.DSProdutos
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Options = [dgTitles, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ParentFont = False
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -13
     TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
+    TitleFont.Style = [fsBold]
     Columns = <
       item
         Expanded = False
@@ -68,17 +84,44 @@ object frmProdutos: TfrmProdutos
       item
         Expanded = False
         FieldName = 'PROD_PRECO'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'PROD_PRECO_PRAZO'
+        Width = 64
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'PROD_ESTOQUE'
+        Width = 64
         Visible = True
       end>
+  end
+  object edtPesqProd: TEdit
+    Left = 154
+    Top = 105
+    Width = 295
+    Height = 25
+    TabOrder = 2
+    OnChange = edtPesqProdChange
+  end
+  object RGBuscar: TRadioGroup
+    Left = 4
+    Top = 48
+    Width = 141
+    Height = 82
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    Items.Strings = (
+      'Por Nome'
+      'Por Barras')
+    ParentFont = False
+    TabOrder = 3
   end
 end

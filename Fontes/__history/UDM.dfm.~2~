@@ -1,9 +1,0 @@
-object DM: TDM
-  Height = 704
-  Width = 1074
-  object FDConn: TFDConnection
-    LoginPrompt = False
-    Left = 32
-    Top = 24
-  end
-end

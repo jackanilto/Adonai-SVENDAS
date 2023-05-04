@@ -1,7 +1,7 @@
 object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
-  Caption = 'Adonai - Sistema Controle de Vendas'
+  Caption = '**'
   ClientHeight = 561
   ClientWidth = 984
   Color = clBtnFace
@@ -2792,6 +2792,13 @@ object frmPrincipal: TfrmPrincipal
       Layout = blGlyphTop
       OnClick = btnPdvClick
     end
+    object SpeedButton1: TSpeedButton
+      Left = 392
+      Top = 16
+      Width = 97
+      Height = 57
+      OnClick = SpeedButton1Click
+    end
   end
   object Menu_Principal: TMainMenu
     Left = 920
@@ -2806,7 +2813,6 @@ object frmPrincipal: TfrmPrincipal
       end
       object BackupRestaura1: TMenuItem
         Caption = 'Backup / Restaura'
-        OnClick = BackupRestaura1Click
       end
       object N8: TMenuItem
         Caption = '-'

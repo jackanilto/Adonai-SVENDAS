@@ -7,7 +7,8 @@ uses
   UFuncoes in 'Fontes\UFuncoes.pas',
   UProdutos in 'Fontes\UProdutos.pas' {frmProdutos},
   UPDV in 'Fontes\UPDV.pas' {frmPDV},
-  UDM in 'Fontes\UDM.pas' {DM: TDataModule};
+  UDM in 'Fontes\UDM.pas' {DM: TDataModule},
+  FBackup in 'Fontes\FBackup.pas' {frmBackup};
 
 {$R *.res}
 
@@ -18,5 +19,6 @@ begin
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TfrmPDV, frmPDV);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TfrmBackup, frmBackup);
   Application.Run;
 end.

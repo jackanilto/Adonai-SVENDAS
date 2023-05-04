@@ -35,6 +35,7 @@ type
     Sair1: TMenuItem;
     N8: TMenuItem;
     BackupRestaura1: TMenuItem;
+    SpeedButton1: TSpeedButton;
     procedure Clientes1Click(Sender: TObject);
     procedure btnClientesClick(Sender: TObject);
     procedure Produtos1Click(Sender: TObject);
@@ -42,7 +43,7 @@ type
     procedure PDV1Click(Sender: TObject);
     procedure btnPdvClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
-    procedure BackupRestaura1Click(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -56,19 +57,9 @@ implementation
 
 {$R *.dfm}
 
-uses UClientes, UFuncoes, UProdutos, UPDV, UDM, uBackup;
+uses UClientes, UFuncoes, UProdutos, UPDV, UDM, FBackup;
 
 
-procedure TfrmPrincipal.BackupRestaura1Click(Sender: TObject);
-begin
-  if TestarPermissao('frmBackupRestore') = False then
-  Close;
-  begin
-    TfrmBackupRestore.Create(self);
-    frmBackupRestore.ShowModal;
-  end;
-
-end;
 
 procedure TfrmPrincipal.btnClientesClick(Sender: TObject);
 begin
@@ -126,6 +117,18 @@ end;
 procedure TfrmPrincipal.Sair1Click(Sender: TObject);
 begin
 Application.Terminate;
+end;
+
+procedure TfrmPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+  if TestarPermissao('frmBackup') = False then
+  Exit;
+  begin
+    frmBackup := TfrmBackup.Create(self);
+    frmBackup.ShowModal;
+  end;
+
+
 end;
 
 end.
